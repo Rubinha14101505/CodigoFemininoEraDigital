@@ -1,0 +1,144 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(to top, #bd87a7, #a65084);
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.05);
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    max-width: 1200px;
+    gap: 30px;
+    transition: transform 0.3s;
+}
+
+.section:hover {
+    transform: scale(1.01);
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.text {
+    flex: 1 1 400px;
+}
+
+.image {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    margin-top: 10px;
+}
+
+
+.image.wide {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 12px 25px;
+    background-color: #ffffff33;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s;
+    z-index: 999;
+}
+
+.back-button:hover {
+    background-color: #ffffff66;
+    color: #a65084;
+    border-color: #a65084;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 20px;
+        flex-direction: column;
+    }
+}
+/* Compact mode */
+.section.compact {
+    padding: 20px;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+.section.compact .text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.section.compact h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.section.compact .image {
+    max-width: 250px;
+    border-radius: 12px;
+}
+
+.section.compact .image.wide {
+    max-width: 100%;
+}
+
+/* Ajustes gerais para menor escala */
+p {
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .section.compact {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .section.compact .image {
+        max-width: 90%;
+        margin-top: 10px;
+    }
+}
